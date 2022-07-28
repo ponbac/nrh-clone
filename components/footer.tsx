@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const Stats = () => {
   const InfoRow = (props: { text: string; icon: string; alt: string }) => {
@@ -22,7 +23,7 @@ const Stats = () => {
       <p className="italic">
         NRH Trauma Riks – Nack-, Rygg- och Hjärnskadade efter trauma
       </p>
-      <div className="border border-dotted space-y-1 p-1">
+      <div className="border border-dotted space-y-1 p-1 divide-y divide-dotted">
         <InfoRow
           text="Visits Today: 148"
           icon="/icons/footer/today.png"
@@ -87,7 +88,7 @@ const Support = () => {
         <p>Bankgiro: 900-5323</p>
         <p>Swish: 900 532-3</p>
         <a
-          href="https://www.nrhtrauma.se/wp-content/uploads/2020/06/NRH-Trauma-Riks-Fakta-om-oss-2020.pdf"
+          href="https://www.nrhtrauma.se/bli-ambassador/"
           className="flex flex-row items-center space-x-1 hover:underline pt-2"
         >
           <p className="font-bold text-base">Så här kan du stödja oss</p>
@@ -108,20 +109,60 @@ const Support = () => {
   );
 };
 
+const SocialIcons = () => {
+  return (
+    <div className="flex flex-row items-center space-x-4 mt-4">
+      <a
+        href="https://web.facebook.com/NRHtrauma/"
+        className="flex flex-row items-center space-x-1 hover:underline"
+      >
+        <FaFacebook size={30} />
+      </a>
+      <a
+        href="https://www.youtube.com/results?search_query=+Personskadef%C3%B6reningen+NRH"
+        className="flex flex-row items-center space-x-1 hover:underline"
+      >
+        <FaYoutube size={30} />
+      </a>
+      <a
+        href="https://twitter.com/Personskadefre1"
+        className="flex flex-row items-center space-x-1 hover:underline"
+      >
+        <FaTwitter size={30} />
+      </a>
+      <a
+        href="https://www.instagram.com/nrh_trauma/"
+        className="flex flex-row items-center space-x-1 hover:underline"
+      >
+        <FaInstagram size={30} />
+      </a>
+    </div>
+  );
+};
+
 const Footer = () => {
   return (
-    <footer className="bg-[#2c2d2f] text-[#8c8989] grid grid-cols-1 lg:grid-cols-4 px-28 pt-4 divide-y lg:divide-x lg:divide-y-0 divide-gray-600">
-      <Stats />
-      <Contact />
-      <Support />
-      <div className="pt-4 lg:pt-0 lg:pl-4 flex justify-center items-center">
-        <Image
-          src="/images/heart-gava.png"
-          alt="Swish QR kod (9005323)"
-          width="300"
-          height="272"
-          layout="fixed"
-        />
+    <footer className="divide-y divide-gray-600/40 bg-[#2c2d2f] text-[#8c8989]">
+      <div className="grid grid-cols-1 lg:grid-cols-4 px-28 py-4 divide-y lg:divide-x lg:divide-y-0 divide-gray-600/80">
+        <Stats />
+        <Contact />
+        <Support />
+        <div className="pt-4 lg:pt-0 lg:pl-4 flex justify-center items-center">
+          <Image
+            src="/images/heart-gava.png"
+            alt="Swish QR kod (9005323)"
+            width="300"
+            height="272"
+            layout="fixed"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col justify-center items-center py-4">
+        <p className="text-xs">
+          © Copyright 2012 - 2022 NRH Trauma Riks – Nack-, Rygg- och
+          Hjärnskadade efter trauma | Webbsidan skapad av Pontus Backman
+        </p>
+        <SocialIcons />
       </div>
     </footer>
   );
