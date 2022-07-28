@@ -1,22 +1,16 @@
 import { ReactNode } from "react";
-
-const Navbar = () => {
-  return <div className="">NAVBAR</div>;
-};
-
-const Footer = () => {
-  return <div className="">FOOTER</div>;
-};
+import Footer from "./footer";
+import Navbar from "./navbar";
 
 type LayoutProps = {
   children: ReactNode;
 };
 export default function Layout({ children }: LayoutProps) {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-yellow-300">
       <Navbar />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }
