@@ -88,7 +88,7 @@ const NavMenu = () => {
     <div className="flex flex-col lg:flex-row lg:gap-8 items-center justify-center py-2">
       <MenuLink to="/" text="Startsida" active={true} />
       <MenuLink
-        to="/artikel/nackproblem-s2db3"
+        to="/artikel/andra-organisationer"
         text="Diagnosticering/Diagnoser"
       />
       <MenuLink to="/" text="Kunskapsspridning" />
