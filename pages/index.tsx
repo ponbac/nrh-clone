@@ -5,11 +5,10 @@ import { NextPageWithLayout } from "./_app";
 
 const WelcomeSection = () => {
   return (
-    <div
+    <section
       className="flex flex-col justify-center items-center text-center space-y-8 bg-cover bg-center w-full h-[40rem]"
       style={{
-        backgroundImage:
-          "url(https://nrhtrauma.se//wp-content/uploads/2019/12/CCJ-Tornn-ligs.jpg)",
+        backgroundImage: "url(/images/welcome-image.jpg)",
         boxShadow: "inset 0 0 0 1000px rgba(200,200,200,.8)",
         textShadow: "1px 1px gray",
       }}
@@ -17,7 +16,7 @@ const WelcomeSection = () => {
       <h2 className="text-4xl font-bold">VÄLKOMMEN TILL</h2>
       <h1 className="text-6xl font-bold">NRH TRAUMA RIKS</h1>
       <h3 className="text-2xl">NACK-, RYGG- & HJÄRNSKADADES RÄTT!</h3>
-    </div>
+    </section>
   );
 };
 

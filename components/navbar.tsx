@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const TopSection = () => {
   const NavButton = (props: { text: string; to: string }) => {
@@ -65,6 +66,8 @@ const TopSection = () => {
 };
 
 const NavMenu = () => {
+  // const router = useRouter();
+
   const MenuLink = (props: { to: string; text: string; active?: boolean }) => {
     return (
       <Link href={props.to}>
@@ -84,7 +87,10 @@ const NavMenu = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:gap-8 items-center justify-center py-2">
       <MenuLink to="/" text="Startsida" active={true} />
-      <MenuLink to="/" text="Diagnosticering/Diagnoser" />
+      <MenuLink
+        to="/artikel/nackproblem-s2db3"
+        text="Diagnosticering/Diagnoser"
+      />
       <MenuLink to="/" text="Kunskapsspridning" />
       <MenuLink to="/" text="Påverkansarbete" />
       <MenuLink to="/" text="Stöd oss" />
@@ -96,7 +102,7 @@ const NavMenu = () => {
 
 const Navbar = () => {
   return (
-    <nav className="divide-y">
+    <nav className="divide-y divide-gray-200">
       <TopSection />
       <NavMenu />
     </nav>
