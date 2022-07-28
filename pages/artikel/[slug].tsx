@@ -31,7 +31,14 @@ const Article: NextPageWithLayout = ({
   post,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
-  const { slug } = router.query;
+
+  if (!router.isFallback && !post) {
+    return <div>Loading...</div>;
+  }
+
+  if (post.title == null) {
+    post.title = "";
+  }
 
   return (
     <div>
