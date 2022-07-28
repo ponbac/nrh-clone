@@ -8,7 +8,7 @@ import { NextPageWithLayout } from "../_app";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const data = await getPost(context.params?.slug);
-  console.log(data);
+  //console.log(data);
 
   return {
     props: {
@@ -33,6 +33,10 @@ const Article: NextPageWithLayout = ({
   const router = useRouter();
 
   if (!router.isFallback && !post) {
+    return <div>Error!</div>;
+  }
+
+  if (router.isFallback && !post) {
     return <div>Loading...</div>;
   }
 
