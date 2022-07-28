@@ -114,27 +114,35 @@ const SocialIcons = () => {
     <div className="flex flex-row items-center space-x-4 mt-4">
       <a
         href="https://web.facebook.com/NRHtrauma/"
+        target={"_blank"}
+        rel="noopener noreferrer"
         className="flex flex-row items-center space-x-1 hover:underline"
       >
-        <FaFacebook size={30} />
+        <FaFacebook size={30} className="hover:text-gray-700 transition-all" />
       </a>
       <a
         href="https://www.youtube.com/results?search_query=+Personskadef%C3%B6reningen+NRH"
+        target={"_blank"}
+        rel="noopener noreferrer"
         className="flex flex-row items-center space-x-1 hover:underline"
       >
-        <FaYoutube size={30} />
+        <FaYoutube size={30} className="hover:text-gray-700 transition-all" />
       </a>
       <a
         href="https://twitter.com/Personskadefre1"
+        target={"_blank"}
+        rel="noopener noreferrer"
         className="flex flex-row items-center space-x-1 hover:underline"
       >
-        <FaTwitter size={30} />
+        <FaTwitter size={30} className="hover:text-gray-700 transition-all" />
       </a>
       <a
         href="https://www.instagram.com/nrh_trauma/"
+        target={"_blank"}
+        rel="noopener noreferrer"
         className="flex flex-row items-center space-x-1 hover:underline"
       >
-        <FaInstagram size={30} />
+        <FaInstagram size={30} className="hover:text-gray-700 transition-all" />
       </a>
     </div>
   );
@@ -158,7 +166,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center py-4">
-        <p className="text-xs">
+        <p className="text-xs px-2 text-center">
           © Copyright 2012 - 2022 NRH Trauma Riks – Nack-, Rygg- och
           Hjärnskadade efter trauma | Webbsidan skapad av Pontus Backman
         </p>
