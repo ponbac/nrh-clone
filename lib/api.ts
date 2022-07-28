@@ -1,13 +1,12 @@
 const API_URL = process.env.WORDPRESS_API_URL;
 
-async function fetchAPI(query = "", { variables } = {}) {
-  const headers = { "Content-Type": "application/json" };
-
-  if (process.env.WORDPRESS_AUTH_REFRESH_TOKEN) {
-    headers[
-      "Authorization"
-    ] = `Bearer ${process.env.WORDPRESS_AUTH_REFRESH_TOKEN}`;
+async function fetchAPI(query = "", { variables }: any = {}) {
+  if (API_URL === undefined) {
+    console.error("Invalid API URL");
+    throw new Error("Invalid API URL");
   }
+
+  const headers = { "Content-Type": "application/json" };
 
   // WPGraphQL Plugin must be enabled
   const res = await fetch(API_URL, {
@@ -39,10 +38,11 @@ export async function getAllPostsWithSlug() {
       }
     }
   `);
+
   return data?.pages;
 }
 
-export async function getPost(slug) {
+export async function getPost(slug: string) {
   const data = await fetchAPI(
     `
     query PostBySlug {

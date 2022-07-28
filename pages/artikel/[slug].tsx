@@ -7,7 +7,7 @@ import { getAllPostsWithSlug, getPost } from "../../lib/api";
 import { NextPageWithLayout } from "../_app";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const data = await getPost(context.params?.slug);
+  const data = await getPost(context.params?.slug as string);
   //console.log(data);
 
   return {
@@ -54,7 +54,10 @@ const Article: NextPageWithLayout = ({
       <main>
         <div className="flex flex-col items-center">
           <h1 className="font-bold text-4xl">{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div
+            className="p-4"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         </div>
       </main>
     </div>
