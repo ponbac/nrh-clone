@@ -119,16 +119,20 @@ const NavMenu = () => {
         </a>
         <ul className="p-0 bg-white divide-y border border-orange-500">
           {subItems.map((item, index) => {
+            let link = item.to;
+            if (!item.external) {
+              link =
+                item.to.length > 2
+                  ? `/artikel/${item.to.replace("/", "") ?? ""}`
+                  : "/";
+            }
+
             return (
               <li key={index} className={""}>
-                <Link
-                  href={
-                    item.to.length > 2
-                      ? `/artikel/${item.to.replace("/", "") ?? ""}`
-                      : "/"
-                  }
-                >
-                  <a>{item.title ?? ""}</a>
+                <Link href={link}>
+                  <a target={item.external ? "_blank" : ""}>
+                    {item.title ?? ""}
+                  </a>
                 </Link>
               </li>
             );

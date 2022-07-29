@@ -1,6 +1,7 @@
 export type MenuItem = {
   title: string;
   to: string;
+  external?: boolean;
 };
 export type SubMenuItem = {
   title: string;
@@ -77,7 +78,11 @@ export const OmItems = [
 ];
 
 export const LokalItems = [
-  { title: "NRH Trauma Västerås", to: "https://vasteras.nrhtrauma.se/" },
+  {
+    title: "NRH Trauma Västerås",
+    to: "https://vasteras.nrhtrauma.se/",
+    external: true,
+  },
   { title: "Bilda en lokalförening", to: "/bilda-en-lokalforening" },
   { title: "Tips/råd", to: "/tips-rad" },
   { title: "Bidrag", to: "/bidrag" },
