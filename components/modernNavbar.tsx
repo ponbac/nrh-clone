@@ -120,7 +120,9 @@ const NavMenu = () => {
           {subItems.map((item, index) => {
             return (
               <li key={index} className={""}>
-                <Link href={`/artikel/${item.to ?? ""}`}>
+                <Link
+                  href={item.to.length > 2 ? `/artikel/${item.to ?? ""}` : "/"}
+                >
                   <a>{item.title ?? ""}</a>
                 </Link>
               </li>
