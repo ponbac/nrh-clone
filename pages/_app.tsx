@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/fusion-styling.css";
+import "../styles/custom-forms.css";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";

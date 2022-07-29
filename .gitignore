@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+bambora.js
 
 # debug
 npm-debug.log*

@@ -1,0 +1,479 @@
+<style>
+    .error {
+      color: red;
+      background: pink;
+      padding: 4px;
+      display: inline;
+    }
+  
+    div.wpcf7 .wpcf7-submit:disabled {
+      cursor: pointer !important;
+    }
+  </style>
+  <script src="https://static.bambora.com/checkout-sdk-web/latest/checkout-sdk-web.min.js"></script>
+  <script src="https://www.nrhtrauma.se/custom-js/bambora.js"></script>
+  <div class="monadsgivare-form">
+    <style>
+      .fusion-slider-loading {
+        display: none;
+      }
+    </style>
+    <div
+      role="form"
+      class="wpcf7"
+      id="wpcf7-f1761-p1579-o1"
+      lang="en-US"
+      dir="ltr"
+    >
+      <div class="screen-reader-response"></div>
+      <form id="bli_medlem_i_nrh_bankkort_alt_Swish"">
+        <div style="display: none;">
+          <input type="hidden" name="amount" id="amount" required />
+          <input type="hidden" name="currency" value="sek" />
+          <input type="hidden" name="customer_ref" id="customer_ref" />
+          <input type="hidden" name="payment_ref" id="payment_ref" />
+          <input type="hidden" name="hash" id="hash" />
+          <input type="hidden" name="merchant_id" value="161" />
+          <!--<input type="hidden" name="test" value="true">-->
+          <input type="text" name="metadata" id="metadata" />
+        </div>
+        <p>
+          <label>
+            Medlemskategori
+            <br />
+            <span class="wpcf7-form-control-wrap Medlemskategori">
+              <span
+                class="wpcf7-form-control wpcf7-radio"
+                id="medlem_radio_buttons"
+              >
+                <span class="wpcf7-list-item first">
+                  <input
+                    type="radio"
+                    name="MEDLEMSKATEGORI"
+                    id="medlemskategori"
+                    value="225.00"
+                    required
+                  />
+                  <span class="wpcf7-list-item-label">
+                    Enskilt årsmedlemskap 225 kr
+                  </span>
+                </span>
+                <span class="wpcf7-list-item last">
+                  <input
+                    type="radio"
+                    name="MEDLEMSKATEGORI"
+                    id="medlemskategori"
+                    value="325.00"
+                    required
+                  />
+                  <span class="wpcf7-list-item-label">
+                    Familje-årsmedlemskap 325 kr
+                  </span>
+                </span>
+              </span>
+            </span>
+          </label>
+        </p>
+  
+        <p>
+          <label>
+            Förnamn *
+            <br />
+            <span class="wpcf7-form-control-wrap Frnamn">
+              <input
+                type="text"
+                id="Frnamn"
+                name="FÖRNAMN"
+                value=""
+                size="40"
+                class="wpcf7-form-control wpcf7-text"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            Efternamn *
+            <br />
+            <span class="wpcf7-form-control-wrap Efternamn">
+              <input
+                type="text"
+                id="Efternamn"
+                name="EFTERNAMN"
+                value=""
+                size="40"
+                class="wpcf7-form-control wpcf7-text"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            E-postadress *
+            <br />
+            <span class="wpcf7-form-control-wrap E-postadress">
+              <input
+                type="email"
+                id="E-postadress"
+                name="E-POSTADRESS"
+                value=""
+                size="40"
+                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              />
+            </span>
+          </label>
+        </p>
+  
+        <p><button id="familjemedlemBtn">+ Familjemedlem</button></p>
+  
+        <div class="container" style="width: 76%; padding: 10px;"></div>
+  
+        <p>
+          <label>
+            Telefon *
+            <span class="wpcf7-form-control-wrap Telefon">
+              <input
+                type="number"
+                id="Telefon"
+                name="TELEFON"
+                class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number"
+                aria-required="true"
+                aria-invalid="false"
+                style="width: 100%;"
+                required
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            Gatuadress
+            <br />
+            <span class="wpcf7-form-control-wrap Gatuadress">
+              <input
+                type="text"
+                id="Gatuadress"
+                name="GATUADRESS"
+                value=""
+                size="40"
+                class="wpcf7-form-control wpcf7-text"
+                aria-invalid="false"
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            Postnummer *
+            <br />
+            <span class="wpcf7-form-control-wrap Postnummer">
+              <input
+                type="number"
+                id="Postnummer"
+                name="POSTNR"
+                value=""
+                class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            Ort *
+            <br />
+            <span class="wpcf7-form-control-wrap Ort">
+              <input
+                type="text"
+                id="Ort"
+                name="ORT"
+                value=""
+                size="40"
+                class="wpcf7-form-control wpcf7-text"
+                aria-required="true"
+                aria-invalid="false"
+                required
+              />
+            </span>
+          </label>
+        </p>
+        <p>
+          <label>
+            Är du
+            <br />
+            <span class="wpcf7-list-item">
+              <input
+                type="radio"
+                name="Är_du:_Skadad_Anhörig_Profession_Övrig"
+                value="Skadad"
+              />
+              <span class="wpcf7-list-item-label">Skadad</span>
+            </span>
+            <span class="wpcf7-list-item last">
+              <input
+                type="radio"
+                name="Är_du:_Skadad_Anhörig_Profession_Övrig"
+                value="Anhörig"
+              />
+              <span class="wpcf7-list-item-label">Anhörig</span>
+            </span>
+            <span class="wpcf7-list-item last">
+              <input
+                type="radio"
+                name="Är_du:_Skadad_Anhörig_Profession_Övrig"
+                value="Stödmedlem"
+              />
+              <span class="wpcf7-list-item-label">Stödmedlem</span>
+            </span>
+            <span class="wpcf7-list-item last">
+              <input
+                type="radio"
+                name="Är_du:_Skadad_Anhörig_Profession_Övrig"
+                value="Annan"
+              />
+              <span class="wpcf7-list-item-label">Annan</span>
+            </span>
+            <span class="wpcf7-list-item last">
+              <input
+                type="radio"
+                name="Är_du:_Skadad_Anhörig_Profession_Övrig"
+                value="Profession, vilken?"
+              />
+              <span class="wpcf7-list-item-label">Profession, vilken?</span>
+            </span>
+          </label>
+        </p>
+  
+        <input
+          type="checkbox"
+          id="nrh-gdpr-policy"
+          name="Jag_godkänner_NRH-s_policy_enligt_GDPR"
+          value="Yes"
+          required
+        />
+        <label for="nrh-gdpr-policy">
+          Jag godkänner
+          <a
+            class="form-link"
+            href="http://www.nrhtrauma.se/startsida/gdpr-policy/"
+            target="_blank"
+          >
+            NRH-s policy
+          </a>
+          enligt GDPR. *
+        </label>
+        <br />
+        <input
+          type="checkbox"
+          id="jag-samtycke"
+          name="Jag_samtycker_till_det_som_står_i_integritetspolicyn_och_bekräftar_att_mina_personuppgifter_får_användas_i_enlighet_med_gällande_lag"
+          value="Yes"
+          required
+        />
+        <label for="jag-samtycke">
+          Jag samtycker till det som står i integritetspolicyn och bekräftar att
+          mina personuppgifter får användas i enlighet med gällande lag. *
+        </label>
+        <br />
+        <input
+          type="checkbox"
+          id="nrh-kopvillkor"
+          name="Jag_accepterar_de_villkor_som_star_skrivna_i_NRH_Traumas_kopvillkor"
+          value="Yes"
+          required
+        />
+        <label for="nrh-kopvillkor">
+          Jag accepterar de villkor som står skrivna i NRH Traumas
+          <a
+            href="https://www.nrhtrauma.se/wp-content/uploads/2021/12/2021-12-06-NRH-Trauma-Riks-Kopvillkor.pdf"
+            target="_blank"
+          >
+            köpvillkor
+          </a>
+          .
+        </label>
+        <br />
+        <label for="köpvillkor">
+          Köpvillkor,
+          <a
+            class="form-link"
+            href="https://www.nrhtrauma.se/kopvillkor/"
+            target="_blank"
+          >
+            Läs mer* här
+          </a>
+        </label>
+        <br />
+        <p>
+          <input
+            type="hidden"
+            name="success_url"
+            value="https://www.nrhtrauma.se/betalning-godkand/"
+          />
+          <input
+            type="hidden"
+            name="error_url"
+            value="https://www.nrhtrauma.se/transaktionen-avbruten/"
+          />
+          <input
+            type="submit"
+            value="Skicka"
+            id="bli_medlem_i_nrh_bankkort_alt_SwishClick"
+            class="wpcf7-form-control wpcf7-submit"
+          />
+        </p>
+      </form>
+    </div>
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  <script>
+    var counter = 1 //start index
+  
+    //clone is a button I created to clone the row
+    $('#familjemedlemBtn').click(function () {
+      //clone the first row
+      var newRow = $('div.container:first').append(
+        '<div class="familjemedlem">\
+              <p><label> Förnamn *<br>\
+                  <span class="wpcf7-form-control-wrap Frnamn">\
+                    <input type="text" id="Familjemedlem_Frnamn-' +
+          counter +
+          '" name="Familjemedlem_FÖRNAMN_' +
+          counter +
+          '" value="" size="40"\
+                      class="wpcf7-form-control wpcf7-text Frnamn af-formvalue" aria-required="true"\
+                      aria-invalid="false" required>\
+                  </span>\
+                </label>\
+              </p>\
+              <p><label> Efternamn *<br>\
+                <span class="wpcf7-form-control-wrap Efternamn"><input type="text" id="Familjemedlem_Efternamn-' +
+          counter +
+          '" name="Familjemedlem_EFTERNAMN_' +
+          counter +
+          '" value=""\
+                    size="40" class="wpcf7-form-control wpcf7-text Efternamn" aria-required="true" aria-invalid="false" required></span>\
+              </label></p>\
+            <p><label> E-postadress *<br>\
+                <span class="wpcf7-form-control-wrap Epostadress"><input type="email" id="Familjemedlem_E-postadress-' +
+          counter +
+          '" name="Familjemedlem_E-POSTADRESS_' +
+          counter +
+          '"\
+                    value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email  wpcf7-validates-as-email Epostadress"\
+                    aria-required="true" aria-invalid="false" required></span> </label></p>\
+            </div>',
+      )
+  
+      counter++
+  
+      return false
+    })
+  
+    $.validator.setDefaults({
+      submitHandler: function () {
+        //form.submit()
+        submitTransaction('bli_medlem_i_nrh_bankkort_alt_Swish', 'bli_medlem_i_nrh_bankkort_alt_SwishClick', 'https://script.google.com/macros/s/AKfycbxtr_dlJoYPFTD47g3lJufG0QR9u-To1xpEy-KbJWOSg0uwGko/exec', 'medlemskategori', false)
+      },
+    })
+  
+    function generateMetadata() {
+      var meta_namn = document.getElementById('Frnamn').value
+      var meta_efternamn = document.getElementById('Efternamn').value
+      var meta_epost = document.getElementById('E-postadress').value
+      var meta_telefon = document.getElementById('Telefon').value
+      var meta_adress = document.getElementById('Gatuadress').value
+      var meta_postnummer = document.getElementById('Postnummer').value
+      var meta_ort = document.getElementById('Ort').value
+  
+      return (
+        '{"fornamn": "' +
+        meta_namn +
+        '"' +
+        ',"efternamn": "' +
+        meta_efternamn +
+        '"' +
+        ',"epost": "' +
+        meta_epost +
+        '"' +
+        ',"telefon": "' +
+        meta_telefon +
+        '"' +
+        ',"adress": "' +
+        meta_adress +
+        '"' +
+        ',"postnummer": "' +
+        meta_postnummer +
+        '"' +
+        ',"from_page": "Bli medlem Swish/Bankkort"' +
+        ',"ort": "' +
+        meta_ort +
+        '"}'
+      )
+    }
+  
+    $().ready(function () {
+      // validate the comment form when it is submitted
+      $('#bli_medlem_i_nrh_bankkort_alt_Swish').validate()
+  
+      // validate signup form on keyup and submit
+      $('#bli_medlem_i_nrh_bankkort_alt_Swish').validate({
+        rules: {
+          email: {
+            required: true,
+            email: true,
+          },
+          agree: 'required',
+        },
+      })
+    })
+    jQuery.extend(jQuery.validator.messages, {
+      required: 'Detta fält är obligatoriskt.',
+      remote: 'Fixa det här fältet.',
+      email: 'Ange en giltig e-postadress.',
+      url: 'Ange en giltig URL.',
+      date: 'Ange ett giltigt datum.',
+      number: 'Ange ett giltigt nummer.',
+      accept: 'Ange ett värde med ett giltigt tillägg.',
+    })
+  
+    // Hide add a family member button when single membership selected
+    $('document').ready(function () {
+      $('#medlem_radio_buttons').on('click', function () {
+        current_radio_value = getRadioVal(
+          document.getElementById('bli_medlem_i_nrh_bankkort_alt_Swish'),
+          'medlemskategori',
+        )
+  
+        if (current_radio_value != 225) {
+          //console.log('Show family!');
+          $('#familjemedlemBtn').show()
+          $('.familjemedlem').show()
+        } else {
+          //console.log('Hide family!');
+          $('#familjemedlemBtn').hide()
+          $('.familjemedlem').remove()
+        }
+      })
+    })
+  </script>
+  
