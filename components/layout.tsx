@@ -13,8 +13,8 @@ export default function Layout({ children }: LayoutProps) {
       <Head>
         <html data-theme="bumblebee"></html>
       </Head>
-      <Navbar />
-      {/* <ModernNavbar /> */}
+      {/* <Navbar /> */}
+      <ModernNavbar />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
