@@ -41,6 +41,10 @@ const Article: NextPageWithLayout = ({
     return <div>Loading...</div>;
   }
 
+  if (!post.content) {
+    return <div>Error, no content!</div>;
+  }
+
   return (
     <div>
       <Head>

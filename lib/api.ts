@@ -56,7 +56,7 @@ export async function getPost(slug: string) {
 
   const page = {
     title: data?.page?.title ?? "",
-    content: data?.page?.content ?? "",
+    content: data?.page?.content ?? "<></>",
   };
 
   return page;
