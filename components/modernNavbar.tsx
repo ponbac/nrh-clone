@@ -121,7 +121,11 @@ const NavMenu = () => {
             return (
               <li key={index} className={""}>
                 <Link
-                  href={item.to.length > 2 ? `/artikel/${item.to ?? ""}` : "/"}
+                  href={
+                    item.to.length > 2
+                      ? `/artikel/${item.to.replace("/", "") ?? ""}`
+                      : "/"
+                  }
                 >
                   <a>{item.title ?? ""}</a>
                 </Link>
