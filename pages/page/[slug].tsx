@@ -23,7 +23,7 @@ export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug();
 
   return {
-    paths: allPosts.edges.map(({ node }: any) => `/artikel/${node.slug}`) || [],
+    paths: allPosts.edges.map(({ node }: any) => `/page/${node.slug}`) || [],
     fallback: true,
   };
 }

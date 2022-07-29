@@ -59,16 +59,13 @@ const TopSection = () => {
           />
           <NavButton
             text="Bli medlem i föreningen"
-            to="https://nrhtrauma.se/nrh-trauma-enkatundersokning-survey-september-2020/"
+            to="/page/bli-medlem-i-nrh-bankkort"
           />
           <NavButton
             text="Dela din berättelse"
             to="https://docs.google.com/forms/d/e/1FAIpQLSfEeZU3x7hBhrRIHLQpRYm19ck_e80nv3eQXp2iNGfxoNHOFg/viewform"
           />
-          <NavButton
-            text="Skänk en gåva"
-            to="https://www.nrhtrauma.se/skank-en-gava/"
-          />
+          <NavButton text="Skänk en gåva" to="/page/skank-en-gava/" />
         </div>
       </div>
     </div>
@@ -119,17 +116,9 @@ const NavMenu = () => {
         </a>
         <ul className="p-0 bg-white divide-y border border-orange-500">
           {subItems.map((item, index) => {
-            let link = item.to;
-            if (!item.external) {
-              link =
-                item.to.length > 2
-                  ? `/artikel/${item.to.replace("/", "") ?? ""}`
-                  : "/";
-            }
-
             return (
-              <li key={index} className={""}>
-                <Link href={link}>
+              <li key={index} className={"hover:bg-gray-200"}>
+                <Link href={item.to}>
                   <a target={item.external ? "_blank" : ""}>
                     {item.title ?? ""}
                   </a>
