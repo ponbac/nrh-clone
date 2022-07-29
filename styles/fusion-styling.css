@@ -61,6 +61,21 @@
   list-style-type: disc;
 }
 
+.fusion-text ol {
+  margin-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  list-style-type: decimal;
+}
+
+.fusion-text a {
+  font-weight: bold;
+}
+
+.fusion-text a:hover {
+  text-decoration: underline;
+  color: rgb(255, 166, 0);
+}
+
 .title-heading-center {
   font-size: 3rem;
 }

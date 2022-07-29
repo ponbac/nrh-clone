@@ -8,7 +8,7 @@ const WelcomeSection = () => {
     <section
       className="flex flex-col justify-center items-center text-center space-y-8 bg-cover bg-center w-full h-[40rem]"
       style={{
-        backgroundImage: "url(/images/welcome-image.jpg)",
+        backgroundImage: "url(/images/welcome-image.webp)",
         boxShadow: "inset 0 0 0 1000px rgba(200,200,200,.8)",
         textShadow: "1px 1px gray",
       }}
