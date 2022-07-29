@@ -28,3 +28,30 @@ a {
     background: white;
   }
 }
+
+.fusion-button {
+  background-color: #3f7ccd;
+  color: aliceblue;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.fusion-button i {
+  padding-right: 0.5rem;
+}
+
+.fusion-button:hover {
+  background-color: #3869aa;
+  color: aliceblue;
+}
+
+.fusion-separator {
+  height: 0.5rem;
+}
+
+.fusion-text {
+  padding: 1rem 1rem 1rem 0rem;
+}

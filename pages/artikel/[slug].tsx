@@ -1,6 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { ReactElement } from "react";
 import Layout from "../../components/layout";
 import { getAllPostsWithSlug, getPost } from "../../lib/api";
@@ -49,13 +50,15 @@ const Article: NextPageWithLayout = ({
       <Head>
         <title>NRH Trauma - {post.title}</title>
         <meta name="description" content="NRH Trauma Clone" />
+        {/* <link rel="stylesheet" href="/styles/fusion-styles.css" /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="flex flex-col items-center">
-          <h1 className="font-bold text-4xl">{post.title}</h1>
+        <div className="flex flex-col">
+          <h1 className="font-bold text-4xl text-center">{post.title}</h1>
+          <Script src="/fa.js"></Script>
           <div
-            className="p-4"
+            className="p-4 lg:px-24"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
