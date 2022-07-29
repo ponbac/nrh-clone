@@ -1,11 +1,16 @@
 .fusion-button {
-  background-color: #3f7ccd;
-  color: aliceblue;
-  padding: 0.5rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
+  background-color: #366aad;
+  border-radius: 2px;
+  color: #ffffff;
+  display: inline-block;
+  font-family: Open Sans;
+  font-size: 14px;
+  letter-spacing: 4px;
+  line-height: 17px;
+  padding: 13px 29px;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .fusion-button i {
@@ -13,7 +18,7 @@
 }
 
 .fusion-button:hover {
-  background-color: #3869aa;
+  background-color: #285186;
   color: aliceblue;
 }
 
@@ -23,4 +28,49 @@
 
 .fusion-text {
   padding: 1rem 1rem 1rem 0rem;
+}
+
+.fusion-text p {
+  margin-bottom: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.fusion-text h1 {
+  font-size: 2.85rem;
+  margin-bottom: 1rem;
+}
+
+.fusion-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.fusion-text h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.fusion-text h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.fusion-text ul {
+  margin-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  list-style-type: disc;
+}
+
+.title-heading-center {
+  font-size: 3rem;
+}
+
+.fusion-imageframe {
+  margin-bottom: 1.25rem;
+}
+
+.img-responsive {
+  display: inline;
+  text-align: center;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
