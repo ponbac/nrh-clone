@@ -35,6 +35,7 @@ const TopSection = () => {
             width="230"
             height="146"
             layout="fixed"
+            priority={true}
           />
         </a>
       </Link>
