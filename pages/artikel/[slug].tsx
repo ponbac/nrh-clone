@@ -41,10 +41,6 @@ const Article: NextPageWithLayout = ({
     return <div>Loading...</div>;
   }
 
-  if (post.title == null) {
-    post.title = "";
-  }
-
   return (
     <div>
       <Head>

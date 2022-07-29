@@ -6,8 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -27,31 +27,4 @@ a {
     color: black;
     background: white;
   }
-}
-
-.fusion-button {
-  background-color: #3f7ccd;
-  color: aliceblue;
-  padding: 0.5rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-}
-
-.fusion-button i {
-  padding-right: 0.5rem;
-}
-
-.fusion-button:hover {
-  background-color: #3869aa;
-  color: aliceblue;
-}
-
-.fusion-separator {
-  height: 0.5rem;
-}
-
-.fusion-text {
-  padding: 1rem 1rem 1rem 0rem;
 }
