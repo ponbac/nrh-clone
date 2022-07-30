@@ -84,7 +84,10 @@ const InfoSection = () => {
   const FolderButton = (props: { link: string; text: string }) => {
     return (
       <Link href={props.link}>
-        <a className="p-2 w-full bg-[#3F7CCD] hover:bg-blue-700 text-center rounded-md transition-all">
+        <a
+          className="p-2 w-full bg-[#3F7CCD] hover:bg-blue-700 text-center rounded-md transition-all"
+          target="_blank"
+        >
           <button>
             <div className="flex items-center">
               <p className="font-bold">{props.text}</p>
@@ -101,7 +104,7 @@ const InfoSection = () => {
       <div>
         <div className="w-header">
           <div className="text-lg flex flex-col items-center p-4">
-            <div className="bg-black/70 lg:w-3/5 p-6 rounded-xl shadow-md shadow-black">
+            <div className="bg-black/70 lg:w-1/2 p-6 rounded-xl shadow-md shadow-black">
               <h1 className="text-5xl text-center">NRH Trauma</h1>
               <h2 className="italic text-2xl text-center">
                 Nack-, rygg- och hjärnskadades rätt
