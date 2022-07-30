@@ -7,15 +7,25 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const data = await fetch(`${process.env["HOST"]}/data/home-news.json`);
-  const articles = await data.json();
+  const res = await fetch(`${process.env["HOST"]}/data/home-news.json`);
 
-  return {
-    props: {
-      articles: articles,
-    },
-    revalidate: 60 * 30,
-  };
+  try {
+    const data = await res.json();
+    return {
+      props: {
+        articles: data,
+      },
+      revalidate: 60 * 30,
+    };
+  } catch (err) {
+    console.error(err);
+    return {
+      props: {
+        articles: [],
+      },
+      revalidate: 60 * 30,
+    };
+  }
 };
 
 const WelcomeSection = () => {
