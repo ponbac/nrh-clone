@@ -60,7 +60,7 @@ const NewsSection = (props: { articles: ArticleData[] }) => {
         <h3 className="text-xl">{article.subTitle}</h3>
         <p className="whitespace-pre-wrap ">{article.content}</p>
         <Link href={article.link}>
-          <a>
+          <a target="_blank">
             <button className="mt-4 flex flex-row items-center justify-center py-2 bg-blue-500 hover:bg-blue-700 rounded-sm text-white transition-all w-full">
               <FaAngleDoubleRight />
               <p className="ml-2 tracking-wider">LÄS MER</p>
