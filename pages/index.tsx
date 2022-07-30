@@ -7,7 +7,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const data = await fetch(`http://192.168.72.253:3000/data/home-news.json`);
+  const data = await fetch(`${process.env["HOST"]}/data/home-news.json`);
   const articles = await data.json();
 
   return {
