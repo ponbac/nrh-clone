@@ -57,7 +57,7 @@ const Article: NextPageWithLayout = ({
         <div className="flex flex-col">
           <Script src="/fa.js"></Script>
           <div
-            className="px-4 lg:px-24"
+            className="lg:px-24"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>

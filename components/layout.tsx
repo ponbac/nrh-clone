@@ -9,7 +9,7 @@ type LayoutProps = {
 };
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex flex-col min-h-screen pt-6">
+    <div className="flex flex-col min-h-screen pt-6 overflow-auto">
       {/* <Navbar /> */}
       <ModernNavbar />
       <main className="flex-1">{children}</main>
