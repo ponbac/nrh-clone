@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
@@ -87,13 +88,12 @@ const Support = () => {
         <p>Plusgiro: 900 532-3</p>
         <p>Bankgiro: 900-5323</p>
         <p>Swish: 900 532-3</p>
-        <a
-          href="https://www.nrhtrauma.se/bli-ambassador/"
-          className="flex flex-row items-center space-x-1 hover:underline pt-2"
-        >
-          <p className="font-bold text-base">Så här kan du stödja oss</p>
-          <BsArrowRight />
-        </a>
+        <Link href="/page/bli-ambassador/">
+          <a className="flex flex-row items-center space-x-1 hover:underline pt-2">
+            <p className="font-bold text-base">Så här kan du stödja oss</p>
+            <BsArrowRight />
+          </a>
+        </Link>
       </div>
       <div className="flex flex-col items-center mt-4">
         <Image
