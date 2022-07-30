@@ -16,7 +16,7 @@ const TopSection = () => {
     return (
       <Link href={props.to}>
         <a>
-          <button className="font-bold text-sm w-48 p-2 bg-gray-300 rounded-lg hover:bg-gray-400 hover:text-orange-500 transition-all">
+          <button className="text-center font-bold text-sm w-48 p-2 bg-gray-300 rounded-lg hover:bg-gray-400 hover:text-orange-500 transition-all">
             {props.text}
           </button>
         </a>
@@ -39,7 +39,7 @@ const TopSection = () => {
           />
         </a>
       </Link>
-      <div className="flex flex-col items-center lg:items-end gap-4 py-4 lg:py-0">
+      <div className="flex flex-col items-center justify-center lg:items-end gap-4 py-4 lg:py-0">
         <Link href="http://www.insamlingskontroll.se/">
           <a target="_blank">
             <Image
@@ -52,7 +52,7 @@ const TopSection = () => {
             />
           </a>
         </Link>
-        <div className="flex flex-col lg:flex-row gap-2">
+        <div className="flex flex-col items-center justify-center lg:flex-row gap-2">
           <NavButton
             text="Enkät"
             to="https://nrhtrauma.se/nrh-trauma-enkatundersokning-survey-september-2020/"
