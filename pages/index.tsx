@@ -94,7 +94,7 @@ const Home: NextPageWithLayout = ({
       <main>
         <div className="flex flex-col min-w-full justify-center items-center">
           <WelcomeSection />
-          <NewsSection articles={articles} />
+          {articles.length > 0 && <NewsSection articles={articles} />}
         </div>
       </main>
     </div>
